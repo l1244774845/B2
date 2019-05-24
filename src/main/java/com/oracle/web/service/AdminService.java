@@ -6,4 +6,6 @@ public interface AdminService {
 
 	int save(Admin admin);
 
+	Admin login(Admin admin);
+
 }
