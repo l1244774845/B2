@@ -13,6 +13,14 @@
 	<!-- ssm整合 -->
 	<dependencies>
 
+		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>3.11</version>
+		</dependency>
+
+
 		<!-- pagehelper插件 -->
 		<dependency>
 			<groupId>com.github.pagehelper</groupId>

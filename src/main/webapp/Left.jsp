@@ -103,20 +103,20 @@ a {
 				</ul>
 			</div>
 		</div>
+		
 		<h3>图书管理</h3>
-
 
 		<div id="booksmanage">
 			<div frame="void" height="80px" align="center" cellspacing="0"
 				width="100px">
 				<ul align="center">
 					<li><span class="ui-icon ui-icon-seek-next"></span><a
-						href="AddBooks.jsp" target="right"><input type="button"
+						href="addBooksUI" target="right"><input type="button"
 							value="添加图书" id="btn4" /></a></li>
 				</ul>
 				<ul align="center">
 					<li><span class="ui-icon ui-icon-arrow-1-se"></span><a
-						href="BookServlet?action=ShowBookpage" target="right"><input
+						href="books/1" target="right"><input
 							type="button" value="查看图书" id="btn5" /></a></li>
 				</ul>
 			</div>

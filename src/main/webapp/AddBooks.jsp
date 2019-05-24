@@ -110,61 +110,62 @@
 	}
 </script>
 </head>
-<body background="./imgs/11.jpg">
-	<form action="BookServlet?action=addbooks" method="post"
+<body background="./imgs">
+	<center>
+		<p>
+			<font color="black" size="6">添加图书</font>
+		</p>
+	</center>
+	<hr width="700px">
+	</br>
+	<form action="book" method="post"
 		enctype="application/x-www-form-urlencoded" name="add"
 		onsubmit="return addb()">
-		<table align="center" width="600px" height="100px" border="1px"
-			cellspacing="0" bordercolor="silver" >
-			<caption align="top">
-				<h1>
-					<font color="red">添加图书</font>
-				</h1>
-				<hr size="2px" color="red" width="600px" />
-			</caption>
+		<table align="center" width="600px" height="400px" border="1px"
+			cellspacing="0" bordercolor="silver" bgcolor="white">
 			<tr align="center">
 				<td>请选择分类:</td>
-				<td><select name="name">
-						<c:forEach items="${updateList }" var="fenlei">
-							<option>${fenlei.name }</option>
+				<td><select name="fId">
+						<c:forEach items="${flist }" var="f">
+							<option value="${f.fId }">${f.fname }</option>
 						</c:forEach>
 				</select></td>
+				<td><span></span></td>
 			</tr>
-			
-			<tr align="center">
-				<td width="100px">图&nbsp;书&nbsp;分&nbsp;类:</td>
-				<td width="200px"><input type="text" name="fname"
-					onblur="validatefName()" /></td>
-				<td width="300px"><span id="fNameMsg"></span></td>
-			</tr>
+
 			<tr align="center">
 				<td width="100px">图&nbsp;书&nbsp;名&nbsp;称:</td>
-				<td width="200px"><input type="text" name="bname"
+				<td width="290px"><input type="text" name="bname"
 					onblur="validateBName()" /></td>
-				<td width="300px"><span id="bNameMsg"></span></td>
+				<td><span id="bNameMsg"></span></td>
 			</tr>
+
 			<tr align="center">
 				<td width="100px">图&nbsp;书&nbsp;价&nbsp;格:</td>
-				<td width="200px"><input type="text" name="bprice"
+				<td width="250px"><input type="text" name="price"
 					onblur="validatePrice()" /></td>
-				<td width="300px"><span id="priceMsg"></span></td>
+				<td><span id="priceMsg"></span></td>
 			</tr>
+
 			<tr align="center">
 				<td width="100px">出&nbsp;&nbsp;&nbsp;版&nbsp;&nbsp;&nbsp;社:</td>
-				<td width="200px"><input type="text" name="bpublish" /></td>
+				<td><input type="text" name="chubanshe" /></td>
+				<td><span></span></td>
 			</tr>
+
 			<tr align="center">
 				<td width="100px">状&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;态:</td>
-				<td width="200px"><input type="radio" name="status" checked
-					value="未借出" />未借出&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
-					type="radio" name="status" value="借出" />借出</td>
+				<td><input type="radio" name="zhuangtai" checked value="未借出" />未借出&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+					type="radio" name="zhuangtai" value="借出" />借出</td>
+				<td><span></span></td>
 			</tr>
 			<tr align="center">
 				<td width="100px">借&nbsp;&nbsp;&nbsp;书&nbsp;&nbsp;&nbsp;人:</td>
-				<td width="200px"><input type="text" name="borrower" /></td>
+				<td><input type="text" name="jieshuren" /></td>
+				<td><span></span></td>
 			</tr>
 			<tr align="center">
-				<td colspan="2"><input type="submit" value="添加" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+				<td colspan="3"><input type="submit" value="添加" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
 					type="reset" value="重填" /></td>
 			</tr>
 		</table>
